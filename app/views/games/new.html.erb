@@ -1,21 +1,60 @@
 <div class="game-new-wrapper" >
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-6 col-md-offset-3">
       <%= form_for @game do |f| %>
         <h1 class="opponent">
-          "vs."<%= f.text_field :name %>
+          <%= f.label :'vs :' , class: 'opponent_name' %>
+          <%= f.text_field :opponent_name %>
         </h1>
-          <div class="form-group">
-            <%= f.label :score %>
-            <%= f.file_field :score%>
+    </div>
+      <div class="col-md-12 ">
+        <div class="form-group">
+          <%= f.label :score %>
+          <%= f.file_field :score%>
+        <table class="table table-border">
+          <thead>
+            <p>＜GK＞</p>
+              <tr>
+                  <th></th>
+                  <th>選手名</th>
+                  <th>阻止率</th>
+                  <th></th>
+                  <th>総数</th>
+                  <th>LW</th>
+                  <th>LB</th>
+                  <th>CB</th>
+                  <th>RB</th>
+                  <th>RW</th>
+                  <th>PV</th>
+                  <th>ノーマーク</th>
+                  <th>ペナルティ</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <th rowspan="2">1</th>
+                  <td rowspan="2">Hanako</td>
+                  <td rowspan="2">Qiita</td>
+                  <td>IN</td>
+              </tr>
+              <tr>
+                  <th>OUT</th>
+              </tr>
+          </tbody>
+        </table>
+
+
           </div>
 
           <div class="form-group">
             <%= f.label :description %>
             <%= f.text_area :description, class: 'form-control' %>
           </div>
+         </div>
 
+         </div>
+         <div class="col-md-4 col-md-offset-4">
           <%= f.submit '保存', class: 'btn btn-black btn-block' %>
 
         <% end %>

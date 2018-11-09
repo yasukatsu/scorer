@@ -14,6 +14,42 @@
      <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
      <% end %>
 
+         <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
+           <div class="container">
+
+               <h1 class = "navbar-brand">Scorer</h1>
+
+             <ul class="nav navbar-nav navbar-right">
+               <% if logged_in? %>
+               <li>
+                 <%= link_to games_path do %>
+                   <h4>ホーム</h4>
+                   <% end %>
+               </li>
+                 <li>
+                   <%= link_to new_game_path do %>
+                     <h4>試合記録</h4>
+                     <% end %>
+                 </li>
+
+                 <li>
+                   <%= link_to new_player_path do %>
+                     <h4>選手登録</h4>
+                     <% end %>
+                 </li>
+
+                 <li>
+                   <%= link_to logout_path, method: :delete do %>
+                     <h4>ログアウト</h4>
+                   <% end %>
+                 </li>
+               <% else %>
+
+               <% end %>
+             </ul>
+           </div>
+         </nav>
+
     <%= yield %>
 
     <script>

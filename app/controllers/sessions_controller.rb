@@ -14,8 +14,18 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    log_out
+    redirect_to root_url, info: 'ログアウトしました'
+  end
+
   private
   def log_in(team)
     session[:team_id] = team.id
+  end
+
+  def log_out
+    session.delete(:team_id)
+    @current_user = nil
   end
 end

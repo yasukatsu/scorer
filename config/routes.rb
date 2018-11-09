@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'players/new'
   get 'sessions/new'
   root 'pages#index'
 
@@ -9,5 +10,6 @@ Rails.application.routes.draw do
 
   resources :teams
   resources :games
+  resources :players
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
