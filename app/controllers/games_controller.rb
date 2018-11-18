@@ -3,6 +3,7 @@ class GamesController < ApplicationController
   def index
     @games = Game.all
     @team = Team.find_by(team_name: params[:format])
+    #@team = Team.all
   end
 
   def new

@@ -1,9 +1,9 @@
 module ApplicationHelper
-  def current_user
+  def current_team
     @current_team ||= Team.find_by(id: session[:team_id])
   end
 
   def logged_in?
-    !current_user.nil?
+    !current_team.nil?
   end
 end

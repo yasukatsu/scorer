@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scorer</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
 <div class="game-new-wrapper" >
   <div class="container">
     <div class="row">
@@ -8,13 +20,15 @@
           <%= f.text_field :opponent_name %>
         </h1>
     </div>
+
       <div class="col-md-12 ">
-        <div class="form-group">
-          <%= f.label :score %>
-          <%= f.file_field :score%>
+
+        <div class="score">
+          <h3 class="score">スコア</h3>
+
+        <p>＜GK＞</p>
         <table class="table table-border">
           <thead>
-            <p>＜GK＞</p>
               <tr>
                   <th></th>
                   <th>選手名</th>
@@ -36,19 +50,82 @@
                   <th rowspan="2">1</th>
                   <td rowspan="2">Hanako</td>
                   <td rowspan="2">Qiita</td>
-                  <td>IN</td>
+                  <td>Save</td>
+                  <td>#</td>
+                  <td>
+                    <form name="form1">
+                    <input type="button" value="－" name="m_btn" onclick="countChange(-1)">
+                    <input class="kazu" size="10" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countChange(1)">
+                    </form>
+                  </td>
+                  <td>
+                    <form name="form2">
+                    <input type="button" value="－" name="m_btn" onclick="countChange(-1)">
+                    <input class="kazu" size="10" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countChange(1)">
+                    </form>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
               </tr>
               <tr>
-                  <th>OUT</th>
+                  <th>In</th>
+              </tr>
+          </tbody>
+          <tbody>
+              <tr>
+                  <th rowspan="2">2</th>
+                  <td rowspan="2">Hana</td>
+                  <td rowspan="2">ta</td>
+                  <td>Save</td>
+                  <td>#</td>
+                  <td>
+
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <th>In</th>
               </tr>
           </tbody>
         </table>
 
+        <p>＜CP＞</p>
+        <table class="table table-border">
+          <thead>
+              <tr>
+                  <th></th>
+                  <th>選手名</th>
+                  <th>決定率</th>
+                  <th></th>
+                  <th>総数</th>
+                  <th>LW</th>
+                  <th>LB</th>
+                  <th>CB</th>
+                  <th>RB</th>
+                  <th>RW</th>
+                  <th>PV</th>
+                  <th>ノーマーク</th>
+                  <th>ペナルティ</th>
+              </tr>
+          </thead>
+          </table>
 
           </div>
 
           <div class="form-group">
-            <%= f.label :description %>
+            <%= f.label :コメント %>
             <%= f.text_area :description, class: 'form-control' %>
           </div>
          </div>
@@ -56,9 +133,30 @@
          </div>
          <div class="col-md-4 col-md-offset-4">
           <%= f.submit '保存', class: 'btn btn-black btn-block' %>
-
         <% end %>
       </div>
     </div>
   </div>
-</div>
+
+  <script>
+
+    function countChange(num){
+        var step = 1;
+        var min = 0;
+        var max = 50;
+
+        var kazu = $(".kazu").val();
+        var kazu = parseInt(kazu);
+          if (num == '1') { kazu += step; };
+          if (num == '-1') { kazu -= step; };
+
+        if ( kazu < min ) { kazu = min; };
+        if ( max < kazu ) { kazu = max; };
+
+        $(".kazu").val(kazu);
+    }
+
+  </script>
+
+</body>
+</html>
