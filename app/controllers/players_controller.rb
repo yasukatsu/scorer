@@ -1,11 +1,13 @@
 class PlayersController < ApplicationController
   def new
     @player = Player.new
+    @@team_id = params[:team_id]
   end
 
   def create
 
-    @player = Player.new(player_params)
+    @player = Player.new
+    @player.team_id = @@team_id
 
   	if @player.save
   		redirect_to games_path, success: '選手登録に成功しました'

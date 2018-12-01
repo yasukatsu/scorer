@@ -54,16 +54,16 @@
                   <td>#</td>
                   <td>
                     <form name="form1">
-                    <input type="button" value="－" name="m_btn" onclick="countChange(-1)">
-                    <input class="kazu" size="10" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countChange(1)">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('lw')">
+                    <input class="kazu" id="lw" size="5" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('lw')">
                     </form>
                   </td>
                   <td>
-                    <form name="form2">
-                    <input type="button" value="－" name="m_btn" onclick="countChange(-1)">
-                    <input class="kazu" size="10" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countChange(1)">
+                    <form name="form1">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('lb')">
+                    <input class="kazu" id="lb" size="5" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('lb')">
                     </form>
                   </td>
                   <td></td>
@@ -139,6 +139,20 @@
   </div>
 
   <script>
+    function countPlus(ele) {
+	    var elementFullName = "#" + ele;
+	    var strKazu = $(elementFullName).val();
+	    var intKazu = parseInt(strKazu);
+	    $(elementFullName).val(intKazu + 1);
+    }
+
+    function countMinus(ele) {
+      var min = 0;
+      var elementFullName = ("#" + ele) ;
+      var strKazu = $(elementFullName).val();
+      var intKazu = parseInt(strKazu);
+      $(elementFullName).val(intKazu - 1) ;
+    }
 
     function countChange(num){
         var step = 1;

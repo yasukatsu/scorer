@@ -4,18 +4,25 @@
       <% if @team.team_name.present? %>
        <%= @team.team_name %>
        <% end %>
-       
     </h1>
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <div class="index-single">
+          <div class = "player-index">
+          <h2>選手一覧</h2>
+          <% @players.each do |player| %>
+           <% if player.present? %>
+           <li>
+           <%= player.name %>
+           ＜<%= player.position %>＞<br></li>
 
-          <h2 class = "player-index">選手一覧</h2>
+           <% end %>
+         <% end %>
+         </div>
 
-          <h2 class = "gemes-index">試合一覧<h2>
+         <div class="games-index">
+           <h2>試合一覧</h2>
+         </div>
 
-
-          </div>
         </div>
       </div>
   　</div>

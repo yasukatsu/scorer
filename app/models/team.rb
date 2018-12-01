@@ -7,4 +7,5 @@ class Team < ApplicationRecord
   has_secure_password validations: true, presence: true, uniqueness: true
 
   has_many :games
+  has_many :players
 end

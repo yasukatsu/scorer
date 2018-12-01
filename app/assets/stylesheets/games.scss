@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.kazu {
+  text-align: center;
+}
 
 .btn-black {
   color: #565656;
@@ -20,19 +23,26 @@
   padding-top: 120px;
 }
 
+
 .game-index-wrapper {
-  padding-top: 70px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: #fafafa;
-  .index-single {
+  .player-index {
     background-color: #fff;
-    padding-top: 20px;
+    padding-top: 5px;
+    padding-left: 20px;
     padding-bottom: 20px;
     margin-top: 30px;
     border: 1px solid #e6ecf0;
     border-radius: 3px;
-    .game-author {
-      //padding-right: 20px;
-      //padding-left: 20px;
-    }
+  }
+  .games-index {
+    background-color: #fff;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
   }
 }

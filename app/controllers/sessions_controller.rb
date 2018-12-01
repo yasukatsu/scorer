@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     team = Team.find_by(team_name: params[:session][:team_name])
     if team && team.authenticate(params[:session][:password])
       log_in team
-      redirect_to games_path(team.team_name), success: 'ログインに成功しました'
+      redirect_to games_path success: 'ログインに成功しました'
     else
       flash.now[:danger] = 'ログインに失敗しました'
       render :new
