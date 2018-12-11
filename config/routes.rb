@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'players/new'
   get 'sessions/new'
   root 'pages#index'
 

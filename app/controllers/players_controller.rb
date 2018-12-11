@@ -1,13 +1,13 @@
 class PlayersController < ApplicationController
   def new
     @player = Player.new
-    @@team_id = params[:team_id]
   end
 
   def create
 
-    @player = Player.new
-    @player.team_id = @@team_id
+    @player = Player.new(player_params)
+    @team = current_team
+    @player.team_id = @team.id
 
   	if @player.save
   		redirect_to games_path, success: '選手登録に成功しました'
@@ -19,6 +19,6 @@ class PlayersController < ApplicationController
 
   private
   def player_params
-    params.require(:player).permit(:name, :position)
+    params.require(:player).permit(:team_id, :name, :position)
   end
 end

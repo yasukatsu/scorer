@@ -6,7 +6,7 @@ class TeamsController < ApplicationController
   def create
     @team = Team.new(team_params)
     if @team.save
-      redirect_to games_path(@team.team_name), success: '登録が完了しました'
+      redirect_to root_path, success: '登録が完了しました。ログイン画面へお進みください。'
     else
       flash.now[:danger] = "登録に失敗しました。"
       render :new
