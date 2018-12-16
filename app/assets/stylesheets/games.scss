@@ -13,10 +13,6 @@
   padding-bottom: 15px;
   font-size: 20px;
   background-color: rgba(0,0,0,0.0);
-
-  //&:hover {
-  //  color: #565656;
-  //}
 }
 
 .game-new-wrapper {
@@ -25,27 +21,50 @@
 }
 
 
+
 .game-index-wrapper {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #fafafa;
+  background-color: #fff;
+
   .player-index {
-    background-color: #fff;
+    background-color: #fafafa;
     padding-top: 5px;
     padding-left: 20px;
     padding-bottom: 20px;
     margin-top: 30px;
     border: 1px solid #e6ecf0;
     border-radius: 3px;
-  }
-  .index-gk {
-    padding-top: 5px;
-  }
-  .index-cp {
-    padding-top: 10px;
-  }
+
+    .index-gk {
+       padding-top: 5px;
+       .gk-players {
+         font-size: 20px;
+       a {
+         color: black;
+       }
+       & :hover {
+         color: blue;
+       }
+     }
+   }
+
+    .index-cp {
+       padding-top: 10px;
+       .cp-players {
+         font-size: 20px;
+       a {
+         color: black;
+       }
+       & :hover {
+         color: blue;
+       }
+      }
+     }
+    }
+
   .games-index {
-    background-color: #fff;
+    background-color: #fafafa;
     padding-top: 5px;
     padding-left: 20px;
     padding-bottom: 20px;

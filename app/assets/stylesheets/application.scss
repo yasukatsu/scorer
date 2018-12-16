@@ -4,13 +4,11 @@
 @import "teams";
 @import "sessions";
 @import "games";
-
+@import "players";
 
 .kazu {
     text-align: center;
 }
-
-
 
 .alert {
   margin-bottom: 0px;
@@ -21,9 +19,13 @@
 
 .navbar-transparent {
   margin-bottom: 0px;
+  color: #fff;
   background-color: rgba(0,0,0,0.5);
   a {
     color: #fff !important;
+  }
+  a :hover {
+    color: yellow !important;
   }
 
   .navbar-brand {
@@ -31,9 +33,5 @@
     font-size: xx-large;
     padding: 15px;
     margin-top: 15px;
-  }
-
-  img {
-    height: 40px;
   }
 }

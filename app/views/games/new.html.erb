@@ -57,122 +57,124 @@
                 </div>
                   <td>Save</td>
                   <td>
-                    <output type="text" name="result">
+                    <input class="kazu" id="<%= player_GK.id %>SaveTotal" size="2" value="0" readonly>
                   </td>
                   <td>
                     <form name="form1">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('save-lw<%= player_GK.id %>')">
-                    <input class="kazu" class="save-lw" id='save-lw<%= player_GK.id %>' size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('save-lw<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>' , 'save-lw')">
+                    <input class="kazu" id='<%= player_GK.id %>save-lw' size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>' , 'save-lw')">
                     </form>
                   </td>
                   <td>
                     <form name="form1">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('save-lb<%= player_GK.id %>')">
-                    <input class="kazu" class="save-lb" id="save-lb<%= player_GK.id %>" size="2" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('save-lb<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>', 'save-lb')">
+                    <input class="kazu" id="<%= player_GK.id %>save-lb" size="2" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>', 'save-lb')">
                     </form>
                   </td>
                   <td>
                     <form name="form1" >
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('save-cb<%= player_GK.id %>')">
-                    <input class="kazu" id="save-cb<%= player_GK.id %>" size="2" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('save-cb<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>', 'save-cb')">
+                    <input class="kazu" id="<%= player_GK.id %>save-cb" size="2" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>', 'save-cb')">
                     </form>
                   </td>
                   <td>
                     <form name="form1">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('save-rb<%= player_GK.id %>')">
-                    <input class="kazu" id="save-rb<%= player_GK.id %>" size="2" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('save-rb<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>', 'save-rb')">
+                    <input class="kazu" id="<%= player_GK.id %>save-rb" size="2" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>', 'save-rb')">
                     </form>
                   </td>
                   <td>
                     <form name="form1">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('save-rw<%= player_GK.id %>')">
-                    <input class="kazu" id="save-rw<%= player_GK.id %>" size="2" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('save-rw<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>', 'save-rw')">
+                    <input class="kazu" id="<%= player_GK.id %>save-rw" size="2" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>', 'save-rw')">
                     </form>
                   </td>
                   <td>
                     <form name="form1">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('save-pv<%= player_GK.id %>')">
-                    <input class="kazu"  id="save-pv<%= player_GK.id %>" size="2" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('save-pv<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>', 'save-pv')">
+                    <input class="kazu"  id="<%= player_GK.id %>save-pv" size="2" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>', 'save-pv')">
                     </form>
                   </td>
                   <td>
                     <form name="form1">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('save-nm<%= player_GK.id %>')">
-                    <input class="kazu" id="save-nm<%= player_GK.id %>" size="2" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('save-nm<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>', 'save-nm')">
+                    <input class="kazu" id="<%= player_GK.id %>save-nm" size="2" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>', 'save-nm')">
                     </form>
                   </td>
                   <td>
                     <form name="form1">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('save-pt<%= player_GK.id %>')">
-                    <input class="kazu" id="save-pt<%= player_GK.id %>" size="2" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('save-pt<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>', 'save-pt')">
+                    <input class="kazu" id="<%= player_GK.id %>save-pt" size="2" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>', 'save-pt')">
                     </form>
                    </td>
               </tr>
               <tr>
                   <td>In</td>
-                  <td>#</td>
+                  <td>
+                    <input class="kazu" id="<%= player_GK.id %>InTotal" size="2" value="0" readonly>
+                  </td>
                   <td>
                     <form name="form2">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-lw<%= player_GK.id %>')">
-                    <input class="kazu" id='in-lw<%= player_GK.id %>' size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-lw<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>', 'in-lw')">
+                    <input class="kazu" id='<%= player_GK.id %>in-lw' size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>', 'in-lw')">
                     </form>
                   </td>
                   <td>
                     <form name="form2">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-lb<%= player_GK.id %>')">
-                    <input class="kazu" id="in-lb<%= player_GK.id %>" size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-lb<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>', 'in-lb')">
+                    <input class="kazu" id="<%= player_GK.id %>in-lb" size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>', 'in-lb')">
                     </form>
                   </td>
                   <td>
                     <form name="form2">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-cb<%= player_GK.id %>')">
-                    <input class="kazu" id="in-cb<%= player_GK.id %>" size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-cb<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>', 'in-cb')">
+                    <input class="kazu" id="<%= player_GK.id %>in-cb" size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>', 'in-cb')">
                     </form>
                   </td>
                   <td>
                     <form name="form2">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-rb<%= player_GK.id %>')">
-                    <input class="kazu" id="in-rb<%= player_GK.id %>" size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-rb<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>', 'in-rb')">
+                    <input class="kazu" id="<%= player_GK.id %>in-rb" size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>', 'in-rb')">
                     </form>
                   </td>
                   <td>
                     <form name="form2">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-rw<%= player_GK.id %>')">
-                    <input class="kazu" id="in-rw<%= player_GK.id %>" size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-rw<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>', 'in-rw')">
+                    <input class="kazu" id="<%= player_GK.id %>in-rw" size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>', 'in-rw')">
                     </form>
                   </td>
                   <td>
                     <form name="form2">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-pv<%= player_GK.id %>')">
-                    <input class="kazu" id="in-pv<%= player_GK.id %>" size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-pv<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>', 'in-pv')">
+                    <input class="kazu" id="<%= player_GK.id %>in-pv" size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>', 'in-pv')">
                     </form>
                   </td>
                   <td>
                     <form name="form2">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-nm<%= player_GK.id %>')">
-                    <input class="kazu" id="in-nm<%= player_GK.id %>" size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-nm<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>', 'in-nm')">
+                    <input class="kazu" id="<%= player_GK.id %>in-nm" size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>', 'in-nm')">
                     </form>
                   </td>
                   <td>
                     <form name="form2">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-pt<%= player_GK.id %>')">
-                    <input class="kazu" id="in-pt<%= player_GK.id %>" size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-pt<%= player_GK.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_GK.id %>', 'in-pt')">
+                    <input class="kazu" id="<%= player_GK.id %>in-pt" size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_GK.id %>', 'in-pt')">
                     </form>
                   </td>
               </tr>
@@ -215,58 +217,58 @@
                   <td>#</td>
                   <td>
                     <form name="form3">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-lw<%= player_CP.id %>')">
-                    <input class="kazu" id="in-lw<%=player_CP.id %>" size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-lw<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'in-lw')">
+                    <input class="kazu" id="<%=player_CP.id %>in-lw" size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'in-lw')">
                     </form>
                   </td>
                   <td>
                     <form name="form3">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-lb<%= player_CP.id %>')">
-                    <input class="kazu" id="in-lb<%= player_CP.id %>" size="2" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-lb<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'in-lb')">
+                    <input class="kazu" id="<%= player_CP.id %>in-lb" size="2" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'in-lb')">
                     </form>
                   </td>
                   <td>
                     <form name="form3">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-cb<%= player_CP.id %>')">
-                    <input class="kazu" id="in-cb<%= player_CP.id %>" size="2" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-cb<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'in-cb')">
+                    <input class="kazu" id="<%= player_CP.id %>in-cb" size="2" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'in-cb')">
                     </form>
                   </td>
                   <td>
                     <form name="form3">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-rb<%= player_CP.id %>')">
-                    <input class="kazu" id="in-rb<%= player_CP.id %>" size="2" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-rb<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'in-rb')">
+                    <input class="kazu" id="<%= player_CP.id %>in-rb" size="2" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'in-rb')">
                     </form>
                   </td>
                   <td>
                     <form name="form3">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-rw<%= player_CP.id %>')">
-                    <input class="kazu" id="in-rw<%= player_CP.id %>" size="2" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-rw<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'in-rw')">
+                    <input class="kazu" id="<%= player_CP.id %>in-rw" size="2" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'in-rw')">
                     </form>
                   </td>
                   <td>
                     <form name="form3">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-pv<%= player_CP.id %>')">
-                    <input class="kazu" id="in-pv<%= player_CP.id %>" size="2" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-pv<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'in-pv')">
+                    <input class="kazu" id="<%= player_CP.id %>in-pv" size="2" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'in-pv')">
                     </form>
                   </td>
                   <td>
                     <form name="form3">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-nm<%= player_CP.id %>')">
-                    <input class="kazu" id="in-nm<%= player_CP.id %>" size="2" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-nm<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'in-nm')">
+                    <input class="kazu" id="<%= player_CP.id %>in-nm" size="2" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'in-nm')">
                     </form>
                   </td>
                   <td>
                     <form name="form3">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('in-pt<%= player_CP.id %>')">
-                    <input class="kazu" id="in-pt<%= player_CP.id %>" size="2" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('in-pt<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'in-pt')">
+                    <input class="kazu" id="<%= player_CP.id %>in-pt" size="2" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'in-pt')">
                     </form>
                    </td>
               </tr>
@@ -275,58 +277,58 @@
                   <td>#</td>
                   <td>
                     <form name="form4">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('out-lw<%= player_CP.id %>')">
-                    <input class="kazu" id='out-lw<%= player_CP.id %>' size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('out-lw<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'out-lw')">
+                    <input class="kazu" id='<%= player_CP.id %>out-lw' size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'out-lw')">
                     </form>
                   </td>
                   <td>
                     <form name="form4">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('out-lb<%= player_CP.id %>')">
-                    <input class="kazu" id="out-lb<%= player_CP.id %>" size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('out-lb<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'out-lb')">
+                    <input class="kazu" id="<%= player_CP.id %>out-lb" size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'out-lb')">
                     </form>
                   </td>
                   <td>
                     <form name="form4">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('out-cb<%= player_CP.id %>')">
-                    <input class="kazu" id="out-cb<%= player_CP.id %>" size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('out-cb<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'out-cb')">
+                    <input class="kazu" id="<%= player_CP.id %>out-cb" size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'out-cb')">
                     </form>
                   </td>
                   <td>
                     <form name="form4">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('out-rb<%= player_CP.id %>')">
-                    <input class="kazu" id="out-rb<%= player_CP.id %>" size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('out-rb<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'out-rb')">
+                    <input class="kazu" id="<%= player_CP.id %>out-rb" size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'out-rb')">
                     </form>
                   </td>
                   <td>
                     <form name="form4">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('out-rw<%= player_CP.id %>')">
-                    <input class="kazu" id="out-rw<%= player_CP.id %>" size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('out-rw<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'out-rw')">
+                    <input class="kazu" id="<%= player_CP.id %>out-rw" size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'out-rw')">
                     </form>
                   </td>
                   <td>
                     <form name="form4">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('out-pv<%= player_CP.id %>')">
-                    <input class="kazu" id="out-pv<%= player_CP.id %>" size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('out-pv<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'out-pv')">
+                    <input class="kazu" id="<%= player_CP.id %>out-pv" size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'out-pv')">
                     </form>
                   </td>
                   <td>
                     <form name="form4">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('out-nm<%= player_CP.id %>')">
-                    <input class="kazu" id="out-nm<%= player_CP.id %>" size="2" value="0" name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('out-nm<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'out-nm')">
+                    <input class="kazu" id="<%= player_CP.id %>out-nm" size="2" value="0" name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'out-nm')">
                     </form>
                   </td>
                   <td>
                     <form name="form4">
-                    <input type="button" value="－" name="m_btn" onclick="countMinus('out-pt<%= player_CP.id %>')">
-                    <input class="kazu" id="out-pt<%= player_CP.id %>" size="2" value="0"  name="cnt_txt" readOnly>
-                    <input type="button" value="＋" name="p_btn" onclick="countPlus('out-pt<%= player_CP.id %>')">
+                    <input type="button" value="－" name="m_btn" onclick="countMinus('<%= player_CP.id %>', 'out-pt')">
+                    <input class="kazu" id="<%= player_CP.id %>out-pt" size="2" value="0"  name="cnt_txt" readOnly>
+                    <input type="button" value="＋" name="p_btn" onclick="countPlus('<%= player_CP.id %>', 'out-pt')">
                     </form>
                   </td>
               </tr>
@@ -352,29 +354,37 @@
   </div>
 
   <script>
-    function countPlus(ele) {
-	    var elementFullName = "#" + ele;
+    function countPlus(player, element) {
+	    var elementFullName = "#" + player + element;
 	    var strKazu = $(elementFullName).val();
 	    var intKazu = parseInt(strKazu);
 	    $(elementFullName).val(intKazu + 1);
+
+      var totalFullName = '#' + player + 'SaveTotal'
+      var strSaveTotal = $(totalFullName).val();
+      var intSaveTotal = parseInt(strSaveTotal);
+      $(totalFullName).val(intSaveTotal +1);
     }
 
-    function countMinus(ele) {
+    function countMinus(player, element) {
       var min = 0;
-      var elementFullName = ("#" + ele) ;
+      var elementFullName = "#" + player + element ;
       var strKazu = $(elementFullName).val();
       var intKazu = parseInt(strKazu);
-      $(elementFullName).val(intKazu - 1) ;
+
+      if (intKazu -1 < 0) {
+        intKazu = 0;
+      } else {
+        intKazu --;
+
+        var totalFullName = '#' + player + 'SaveTotal'
+        var strSaveTotal = $(totalFullName).val();
+        var intSaveTotal = parseInt(strSaveTotal);
+        $(totalFullName).val(intSaveTotal -1);
+      }
+
+      $(elementFullName).val(intKazu) ;
     }
-
-
-    function t) {
-        var val1 = parseInt($('.save-lw').val());
-        var val2 = parseInt($('.save-lb').val());
-        var result = val1 + val2;
-        $('.result').val(result);
-    });
-
   </script>
 
 </body>
