@@ -5,6 +5,8 @@ class GamesController < ApplicationController
     @team = current_team
     @player_GK = Player.where(team_id: @team.id, position: "GK")
     @player_CP = Player.where(team_id: @team.id, position: "CP")
+
+    @game = Game.where(team_id: @team.id)
   end
 
   def new
@@ -20,7 +22,7 @@ class GamesController < ApplicationController
     @game = current_team.games.new(game_params)
 
     if @game.save
-      redirect_to games_path success: '保存しました'
+      redirect_to scores_path, success: '保存しました'
     else
       flash.now[:danger] = "保存に失敗しました"
       render :new

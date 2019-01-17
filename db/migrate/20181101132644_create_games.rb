@@ -5,9 +5,10 @@ class CreateGames < ActiveRecord::Migration[5.2]
       t.string :opponent_name
       t.integer :score
       t.string :description
+      t.string :play_player_name
+
       t.timestamps
     end
 
-    
   end
 end

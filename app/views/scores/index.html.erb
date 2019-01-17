@@ -302,6 +302,20 @@
 
     <script>
 
+      $(function() {
+        $(".gk_table").hide(function () {
+          if player_GK.present?
+          $(".cp_table").show();
+        });
+      });
+
+      $(function() {
+        $(".cp_table").hide(function () {
+          if player_CP.present?
+          $(".gk_table").show();
+        });
+      });
+
       $(function () {
         $(".p_btn").click(function () {
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_081426) do
+ActiveRecord::Schema.define(version: 2019_01_15_091541) do
 
   create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "team_id"
@@ -25,6 +25,34 @@ ActiveRecord::Schema.define(version: 2018_11_08_081426) do
     t.integer "team_id"
     t.string "name"
     t.string "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "scores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "game_id"
+    t.integer "team_id"
+    t.string "name"
+    t.string "position"
+    t.integer "rate"
+    t.integer "upper_total"
+    t.integer "upper_lw"
+    t.integer "upper_lb"
+    t.integer "upper_cb"
+    t.integer "upper_rb"
+    t.integer "upper_rw"
+    t.integer "upper_pv"
+    t.integer "upper_pt"
+    t.integer "upper_nm"
+    t.integer "lower_total"
+    t.integer "lower_lw"
+    t.integer "lower_lb"
+    t.integer "lower_cb"
+    t.integer "lower_rb"
+    t.integer "lower_rw"
+    t.integer "lower_pv"
+    t.integer "lower_pt"
+    t.integer "lower_nm"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

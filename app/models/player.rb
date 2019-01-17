@@ -4,4 +4,5 @@ class Player < ApplicationRecord
 
   belongs_to :game, optional: true
   belongs_to :team, optional: true
+  has_many :scores
 end

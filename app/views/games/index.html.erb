@@ -38,6 +38,11 @@
 
          <div class="games-index">
            <h2>試合一覧</h2>
+           <% @game.each do |game| %>
+           <ul>
+             <li><%= game %></li>
+           </ul>
+           <% end %>
          </div>
 
         </div>

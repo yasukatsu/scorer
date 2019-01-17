@@ -5,6 +5,7 @@
 @import "sessions";
 @import "games";
 @import "players";
+@import "scores";
 
 .kazu {
     text-align: center;
@@ -33,5 +34,8 @@
     font-size: xx-large;
     padding: 15px;
     margin-top: 15px;
+  }
+  .navbar-nav {
+    padding: 5px;
   }
 }
